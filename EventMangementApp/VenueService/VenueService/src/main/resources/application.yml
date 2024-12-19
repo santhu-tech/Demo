@@ -1,0 +1,26 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: VENUE-SERVICE
+  eureka:
+    client:
+      defaultZone: localhost
+      register-with-eureka: true
+      fetch-registry: false
+    instance:
+      prefer-ip-address: true
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/venue_management_db
+    username: root
+    password: Viyaan@17
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update  # Automatically updates the database schema
+    show-sql: true       # Logs SQL queries to the console
+    properties:
+      hibernate.dialect: org.hibernate.dialect.MySQL8Dialect
